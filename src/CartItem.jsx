@@ -66,7 +66,7 @@ const CartItem = ({ onContinueShopping }) => {
           </div>
         ))}
       </div>
-      <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'></div>
+      <div style={{ marginTop: '20px', color: 'black' }} className='total_cart_amount'>{calculateTotalAmount}</div>
       <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
@@ -75,6 +75,8 @@ const CartItem = ({ onContinueShopping }) => {
     </div>
   );
 };
+
+export const {updateQuantity, removeItem} = CartItem.actions;
 
 export default CartItem;
 
